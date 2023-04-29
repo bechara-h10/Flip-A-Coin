@@ -65,12 +65,12 @@ body {
 }
 
 .flip-button {
-  background-color: #575ce5;
+  border: solid 1px #575ce5;
+  background-color: #f9fbfc;
 }
 
 .reset-button {
-  border: solid 1px #575ce5;
-  background-color: #f9fbfc;
+  background-color: #575ce5;
 }
 
 .coins-container {
