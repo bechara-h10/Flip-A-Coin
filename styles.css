@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #575ce5 50%, #f9fbfc 50%) fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 300px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.scores {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.heads-score,
+.tails-score {
+  font-weight: 700;
+}
+
+.scores p {
+  margin: 0;
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flip-button,
+.reset-button {
+  width: 25%;
+  padding: 5px 10px;
+  font-size: inherit;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-button {
+  background-color: #575ce5;
+}
+
+.reset-button {
+  border: solid 1px #575ce5;
+  background-color: #f9fbfc;
+}
+
+.coins-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.heads,
+.tails {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.tails {
+  transform: rotateX(180deg);
+  z-index: -1;
+}
+
+@keyframes spin-tails {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(1980deg);
+  }
+}
+
+@keyframes spin-heads {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(2160deg);
+  }
+}
+
+@media (width<=200px) {
+  body {
+    font-size: 0.6em;
+  }
+}
